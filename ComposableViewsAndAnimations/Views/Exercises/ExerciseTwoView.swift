@@ -38,39 +38,28 @@ struct ExerciseTwoView: View {
                 Circle()
                 //Inital cirlce size
                     .frame(width: 300, height: 300)
-                
                 //Circle colour
                     .foregroundColor(hue)
-                
                 //Circle size
                     .scaleEffect(scaleFactor)
-                
                 //Circles position
                     .offset(x: 0, y: offset)
-                
                 //Circle shrinking animation
                     .animation(.default)
-                
                 //Iteractive Circle
                     .onTapGesture {
                         //Bool statment dependent on cirlce value
                         if scaleFactor > 0.2 {
-                            
                             // Reduce the size of the circle by a tenth
                             scaleFactor -= 0.1
-                            
                             //Animate positon change
                             withAnimation(.default) {
-                                
                                 //Change position
                                 offset += 50
                             }
-                            
                         } else {
-                            
                             // Make sure the button doesn't entirely disappear
                             scaleFactor = 1
-                            
                             // Change the color of the view to a random hue
                             hue = Color(hue: Double.random(in: 1...360) / 360.0,
                                         saturation: 0.8,
