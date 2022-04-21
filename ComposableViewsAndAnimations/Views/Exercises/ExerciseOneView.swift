@@ -14,6 +14,15 @@ struct ExerciseOneView: View {
     
     // Controls whether this view is showing or not
     @Binding var showThisView: Bool
+    
+    // Controls the size of the circle
+    @State private var scaleFactor: CGFloat = 1.0
+    
+    // Controls the size of the circle
+    @State private var offset: CGFloat = -200.0
+    
+    // Controls the hue of the circle
+    @State private var hue: Color = .red
         
     // Whether to apply the animation
     @State private var useAnimation = false
@@ -27,9 +36,36 @@ struct ExerciseOneView: View {
             VStack {
 
                 Circle()
-                    .frame(width: 200, height: 200)
-                    .foregroundColor(.blue)
-                
+                //Inital cirlce size
+                    .frame(width: 300, height: 300)
+                //Circle colour
+                    .foregroundColor(hue)
+                //Circle size
+                    .scaleEffect(scaleFactor)
+                //Circles position
+                    .offset(x: 0, y: offset)
+                //Circle shrinking animation
+                    .animation(.default)
+                    .onTapGesture {
+                        //Bool statment dependent on cirlce value
+                        if scaleFactor > 0.2 {
+                            // Reduce the size of the circle by a tenth
+                            scaleFactor -= 0.1
+                            
+                            //Animate & change the offset
+                            withAnimation(.default) {
+                                offset += 50
+                            }
+                            
+                        } else {
+                            // Make sure the button doesn't entirely disappear
+                            scaleFactor = 1
+                            // Change the color of the view to a random hue
+                            hue = Color(hue: Double.random(in: 1...360) / 360.0,
+                                        saturation: 0.8,
+                                        brightness: 0.8)
+                        }
+                    }
             }
             .navigationTitle("Exercise 1")
             .toolbar {
@@ -39,9 +75,7 @@ struct ExerciseOneView: View {
                     }
                 }
             }
-
         }
-        
     }
     
     // MARK: Functions
@@ -50,7 +84,6 @@ struct ExerciseOneView: View {
     func hideView() {
         showThisView = false
     }
-    
 }
 
 struct ExerciseOneView_Previews: PreviewProvider {
