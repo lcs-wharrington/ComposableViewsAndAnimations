@@ -13,8 +13,10 @@ struct CustomComposableView: View {
     // MARK: Stored properties
 
     // For driving animation to reveal rectangle with progress meter fill
-        @State private var progressMeterOffset = CGSize.zero
+    @State private var progressMeterOffset = 0.0
 
+    @State var currentOpacity = 1.0
+    
     // MARK: Computed properties
     var body: some View {
         
@@ -34,18 +36,23 @@ struct CustomComposableView: View {
                         .font(.largeTitle)
                         .foregroundColor(Color.primary)
                         .colorInvert()
+                        .opacity(currentOpacity)
 
                     // Empty thumbs up
                     Image(systemName: "hand.thumbsup")
                         .frame(alignment: .center)
                         .font(.largeTitle)
                         .foregroundColor(.blue)
+                        .opacity(currentOpacity)
                 }
-                .offset(progressMeterOffset)
+                .offset(x: 0, y: progressMeterOffset)
                 .onTapGesture(perform: {
-                    withAnimation(Animation.easeIn(duration: 1.0)) {
+                    withAnimation(Animation.easeIn(duration: 0.5)) {
                         // Offset is moves the opaque rectangle up
-                        progressMeterOffset = CGSize(width: 0, height: -1 * (548 - 44))
+                        progressMeterOffset = -100
+                        
+                        //Thumb fades out
+                        currentOpacity = 0.0
                     }
                 })
             }
