@@ -10,17 +10,34 @@ import SwiftUI
 struct ComposableTwoView: View {
     
     // MARK: Stored properties
-
-    // For driving animation to reveal rectangle with progress meter fill
-    @State private var progressMeterOffset = 0.0
-
     @State var currentOpacity = 1.0
+    
+    // Contorl rotation of the star
+    @State var repeatRotation = 0.0
+    
+    // Timer
+    let timer = Timer.publish(every: 0.25, on: .main, in: .common).autoconnect()
     
     // MARK: Computed properties
     var body: some View {
         
-        Text("WH")
-        
+        Image(systemName: "repeat")
+            .resizable()
+            .frame(width: 80, height: 80, alignment: .center)
+            .foregroundColor(.green)
+            .opacity(currentOpacity)
+            .onTapGesture {
+                withAnimation(
+                    Animation
+                        .easeInOut(duration: 1.0)
+        ) {
+            // Spin the repeat
+            repeatRotation = 360
+            
+            //Repeat fades out
+            currentOpacity = 0.0
+        }
+    }
     }
 }
 
