@@ -19,19 +19,14 @@ struct CustomComposableDescriptionView: View {
             
             Group {
                 
-                Text("Description")
+                Text("Thumb Up, By WH")
                     .font(.title2)
                     .bold()
                     .padding(.top)
                 
                 Text("""
-                    Replace this with a description of how to use this view.
-
-                    If the view accepts a parameter, provide a control to enter the input below.
+                    This animation functions as a like button. When the empty blue thumb up is taped it floats up reveling a solid blue thumb up.
                     """)
-                
-                TextField("Enter an input value", text: $phrase)
-                
             }
             .padding(.bottom)
             

@@ -47,8 +47,11 @@ struct CustomComposableView: View {
                 }
                 .offset(x: 0, y: progressMeterOffset)
                 .onTapGesture(perform: {
-                    withAnimation(Animation.easeIn(duration: 0.5)) {
-                        // Offset is moves the opaque rectangle up
+                    withAnimation(
+                        Animation
+                            .easeIn(duration: 1.0)
+                    ) {
+                        // Offset is moves the opaque thumb up
                         progressMeterOffset = -100
                         
                         //Thumb fades out
