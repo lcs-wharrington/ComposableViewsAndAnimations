@@ -31,6 +31,8 @@
 		81D2F47925E5855600ACF089 /* ExerciseTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47825E5855600ACF089 /* ExerciseTwoView.swift */; };
 		81D2F47C25E5856E00ACF089 /* ExerciseThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F47B25E5856E00ACF089 /* ExerciseThreeView.swift */; };
 		81D2F48325E7199300ACF089 /* TutorialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2F48225E7199300ACF089 /* TutorialsView.swift */; };
+		EACC594728198CB000DE69AF /* ComposableTwoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC594628198CB000DE69AF /* ComposableTwoView.swift */; };
+		EACC594B28198D0100DE69AF /* ComposableTwoDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACC594A28198D0100DE69AF /* ComposableTwoDescriptionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		81D2F48225E7199300ACF089 /* TutorialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsView.swift; sourceTree = "<group>"; };
 		81D2F48A25E71FA400ACF089 /* CompletionMeterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionMeterView.swift; sourceTree = "<group>"; };
 		81D2F48B25E71FA400ACF089 /* CompletionMeterDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionMeterDescriptionView.swift; sourceTree = "<group>"; };
+		EACC594628198CB000DE69AF /* ComposableTwoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableTwoView.swift; sourceTree = "<group>"; };
+		EACC594A28198D0100DE69AF /* ComposableTwoDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposableTwoDescriptionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +159,8 @@
 			children = (
 				81331FB625E736AA00CFDB02 /* CustomComposableDescriptionView.swift */,
 				81331FBA25E736B600CFDB02 /* CustomComposableView.swift */,
+				EACC594A28198D0100DE69AF /* ComposableTwoDescriptionView.swift */,
+				EACC594628198CB000DE69AF /* ComposableTwoView.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				81331FB725E736AA00CFDB02 /* CustomComposableDescriptionView.swift in Sources */,
 				0E8E8B0525E5442100012516 /* ImplicitAnimationsView.swift in Sources */,
 				81D2F46925E57FAE00ACF089 /* EAExampleOneView.swift in Sources */,
+				EACC594B28198D0100DE69AF /* ComposableTwoDescriptionView.swift in Sources */,
 				0E84E4F025E591F90052BC69 /* FontsView.swift in Sources */,
 				81D2F48325E7199300ACF089 /* TutorialsView.swift in Sources */,
 				81D2F47625E5851600ACF089 /* ExerciseOneView.swift in Sources */,
@@ -300,6 +307,7 @@
 				81D2F47925E5855600ACF089 /* ExerciseTwoView.swift in Sources */,
 				81D2F47225E5843200ACF089 /* ExercisesView.swift in Sources */,
 				81D2F46625E57F5500ACF089 /* ExplicitAnimationsView.swift in Sources */,
+				EACC594728198CB000DE69AF /* ComposableTwoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

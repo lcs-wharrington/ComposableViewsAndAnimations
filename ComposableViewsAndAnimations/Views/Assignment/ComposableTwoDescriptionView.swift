@@ -1,13 +1,13 @@
 //
-//  CustomComposableDescriptionView.swift
+//  ComposableTwoDescriptionView.swift
 //  ComposableViewsAndAnimations
 //
-//  Created by Russell Gordon on 2021-02-23.
+//  Created by William Robert Harrington on 2022-04-27.
 //
 
 import SwiftUI
 
-struct CustomComposableDescriptionView: View {
+struct ComposableTwoDescriptionView: View {
     
     // MARK: Stored properties
     @State private var phrase: String = ""
@@ -19,35 +19,35 @@ struct CustomComposableDescriptionView: View {
             
             Group {
                 
-                Text("Thumb Up Button")
+                Text("Custom 2")
                     .font(.title2)
                     .bold()
                     .padding(.top)
                 
                 Text("""
-                    This animation functions as a like button. When the empty blue thumb up is taped it floats up reveling a solid blue thumb up.
+                    [Description...]
                     """)
             }
             .padding(.bottom)
             
             List {
-                NavigationLink(destination: CustomComposableView()) {
-                    SimpleListItemView(title: "Thumb Up Animation",
+                NavigationLink(destination: ComposableTwoView()) {
+                    SimpleListItemView(title: "[Name...] Animation",
                                        caption: "WH")
                 }
             }
             
         }
         .padding()
-        .navigationTitle("Thumb Up")
+        .navigationTitle("Composable Two View")
         
     }
 }
 
-struct CustomComposableDescriptionView_Previews: PreviewProvider {
+struct ComposableTwoDescriptionView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CustomComposableDescriptionView()
+            ComposableTwoDescriptionView()
         }
     }
 }
