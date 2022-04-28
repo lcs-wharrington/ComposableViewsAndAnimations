@@ -99,7 +99,7 @@ struct ContentView: View {
                     
                     NavigationLink(destination: ComposableTwoDescriptionView()) {
                         
-                        SimpleListItemView(title: "Custom 2",
+                        SimpleListItemView(title: "Repeat",
                                            caption: "WH")
 
                     }

@@ -11,9 +11,11 @@ import SwiftUI
 struct CustomComposableView: View {
     
     // MARK: Stored properties
+    
+    let hue: Double
 
     // For driving animation to reveal rectangle with progress meter fill
-    @State private var progressMeterOffset = 0.0
+    @State var progressMeterOffset = 0.0
 
     @State var currentOpacity = 1.0
     
@@ -27,7 +29,9 @@ struct CustomComposableView: View {
                 Image(systemName: "hand.thumbsup.fill")
                     .frame(alignment: .center)
                     .font(.largeTitle)
-                    .foregroundColor(.blue)
+                    .foregroundColor(
+                        Color(hue: hue/360.0, saturation: 1.0, brightness: 1.0)
+                    )
                 
                 ZStack {
                     // White full thumbs up Will slide up
@@ -42,7 +46,9 @@ struct CustomComposableView: View {
                     Image(systemName: "hand.thumbsup")
                         .frame(alignment: .center)
                         .font(.largeTitle)
-                        .foregroundColor(.blue)
+                        .foregroundColor(
+                            Color(hue: hue/360.0, saturation: 1.0, brightness: 1.0)
+                        )
                         .opacity(currentOpacity)
                 }
                 .offset(x: 0, y: progressMeterOffset)
@@ -66,6 +72,6 @@ struct CustomComposableView: View {
 
 struct CustomComposableView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomComposableView()
+        CustomComposableView(hue: 180.0)
     }
 }

@@ -19,27 +19,27 @@ struct ComposableTwoDescriptionView: View {
             
             Group {
                 
-                Text("Custom 2")
+                Text("Repeat Button")
                     .font(.title2)
                     .bold()
                     .padding(.top)
                 
                 Text("""
-                    [Description...]
+                    The repeat symbol that when taped on rotates and the fades away. this could be used as a replay button, re-load and more.
                     """)
             }
             .padding(.bottom)
             
             List {
                 NavigationLink(destination: ComposableTwoView()) {
-                    SimpleListItemView(title: "[Name...] Animation",
+                    SimpleListItemView(title: "Repeat Animation",
                                        caption: "WH")
                 }
             }
             
         }
         .padding()
-        .navigationTitle("Composable Two View")
+        .navigationTitle("Repeat")
         
     }
 }
