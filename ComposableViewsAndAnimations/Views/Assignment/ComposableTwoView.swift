@@ -39,6 +39,7 @@ struct ComposableTwoView: View {
             currentOpacity = 0.0
         }
     }
+        Text("An Exclusive Srtify Premium Feature")
     }
 }
 
