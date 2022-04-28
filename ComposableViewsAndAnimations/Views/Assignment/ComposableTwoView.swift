@@ -25,14 +25,15 @@ struct ComposableTwoView: View {
             .resizable()
             .frame(width: 80, height: 80, alignment: .center)
             .foregroundColor(.green)
+            .rotation3DEffect(Angle.degrees(repeatRotation), axis: (x: 0, y: 0, z: 1))
             .opacity(currentOpacity)
             .onTapGesture {
                 withAnimation(
                     Animation
-                        .easeInOut(duration: 1.0)
+                        .easeInOut(duration: 0.5)
         ) {
             // Spin the repeat
-            repeatRotation = 360
+            repeatRotation = 180
             
             //Repeat fades out
             currentOpacity = 0.0
